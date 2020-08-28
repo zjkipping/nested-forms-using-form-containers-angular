@@ -1,0 +1,8 @@
+<form [formGroup]="form" (ngSubmit)="formPagesService.submitFormToApi()">
+  <input placeholder="name" formControlName="name">
+  <input placeholder="description" formControlName="description">
+  <input placeholder="length" formControlName="length">
+</form>
+
+<a routerLink="../page3">Previous Page</a>
+<button [disabled]="!containerForm.control.valid" (click)="formPagesService.submitFormToApi()">Submit</button>

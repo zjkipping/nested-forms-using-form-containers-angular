@@ -1,0 +1,8 @@
+<ng-container [formGroup]="forms">
+  <router-outlet></router-outlet>
+</ng-container>
+
+<section>
+  <div>Status: {{forms.status}}</div>
+  <pre>{{forms.value | json}}</pre>
+</section>
